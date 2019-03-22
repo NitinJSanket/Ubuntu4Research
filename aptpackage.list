@@ -53,3 +53,4 @@ openexr-devel
 libwebp-devel
 gcc
 gcc-c++
+openssh-server
