@@ -17,3 +17,8 @@ Ubuntu Setup for Research in Robotics and Computer Vision
 - Terminal > Right click > Profiles > Profile Preferences > Change transparency settings in Colors to about 10%
 - Gedit > Edit > Preferences > Font & Colors > Select Oblivion theme
 - Sticky Keys turn off: Dsiplays > Sticky keys off
+
+## TODO:
+- MATLAB
+- Extracting Frames from VLC (https://www.raymond.cc/blog/extract-video-frames-to-images-using-vlc-media-player/)
+- rqt_bag
