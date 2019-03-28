@@ -21,6 +21,7 @@ Ubuntu Setup for Research in Robotics and Computer Vision
 - Changing Arrow Size in Corel: https://graphicdesign.stackexchange.com/questions/60308/how-to-change-the-arrowhead-size-in-coreldraw
 - Fixing sound: https://itsfoss.com/fix-sound-ubuntu-1304-quick-tip/
 - python-tk
+- tqdm
 ## TODO:
 - MATLAB
 - Extracting Frames from VLC (https://www.raymond.cc/blog/extract-video-frames-to-images-using-vlc-media-player/)
