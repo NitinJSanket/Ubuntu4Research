@@ -24,9 +24,8 @@ printf "${YELLOW} Add NVIDIA package repository ${NC}"
 wget https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64
 mv cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64 cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
 sudo dpkg -i cuda-repo-ubuntu1804-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
-sudo sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48_1/7fa2af80.pub
+sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
 sudo apt-get update
-sudo apt-get install cuda-libraries-10-0
-sudo apt-get install cuda
+sudo apt-get install cuda-libraries-10-0 cuda-runtime-10-0 cuda-demo-suite-10-0 cuda-10-0
 printf "${YELLOW} Paste this in your ~/.bashrc${NC} \n # CUDA Config \n export PATH=/usr/local/cuda/bin${PATH:+:${PATH}} \n export LD_LIBRARY_PATH=/usr/local/cuda/lib64/\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}\n"
 printf "${YELLOW} Reboot your PC and test with nvidia-smi ${NC}" 

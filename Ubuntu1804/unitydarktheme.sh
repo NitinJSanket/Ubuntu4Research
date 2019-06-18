@@ -13,6 +13,8 @@ sudo add-apt-repository ppa:noobslab/icons
 sudo apt update
 sudo apt install arc-theme
 sudo apt install arc-icons
+sudo apt-get install notify-osd
+sudo apt-get install overlay-scrollbar
 sudo apt install unity-tweak-tool
 
 printf "${YELLOW} Select ARC Theme and Icons in Unity Tweak tool ${NC}" 

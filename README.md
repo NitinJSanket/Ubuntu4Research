@@ -15,11 +15,12 @@ Ubuntu Setup for Research in Robotics and Computer Vision
 
 ## Order of Installation
 - NVIDIA Driver
-- Cuda
-- CuDNN
+- Cuda (Check Version using nvidia-smi)
+- CuDNN (Check Version using nvcc --version)
 - OpenCV
 - ROS
 - TensorFlow
+
 
 - Terminal > Right click > Profiles > Profile Preferences > Change transparency settings in Colors to about 10%
 - Gedit > Edit > Preferences > Font & Colors > Select Oblivion theme
@@ -33,4 +34,4 @@ Ubuntu Setup for Research in Robotics and Computer Vision
 - MATLAB
 - Extracting Frames from VLC (https://www.raymond.cc/blog/extract-video-frames-to-images-using-vlc-media-player/)
 - rqt_bag
-
+- Printer Setup
