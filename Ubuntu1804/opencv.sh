@@ -8,17 +8,20 @@ CYAN='\033[1;36m'
 YELLOW='\033[1;33m'
 
 printf "${YELLOW} Installing OpenCV 3.4 ${NC}" 
-sudo apt -y remove x264 libx264-dev
+sudo apt -y remove x264 libx264-dev 
 cwd=$(pwd)
 sudo apt -y install $(awk '{print $1'} aptpackage.list)
 cd /usr/include/linux
 sudo ln -s -f ../libv4l1-videodev.h videodev.h
 cd $cwd
+wget -O OpenCV-3.4.zip https://astuteinternet.dl.sourceforge.net/project/opencvlibrary/opencv-unix/3.4.0/opencv-3.4.0.zip
+printf "${YELLOW}Installing OpenCV 3.4 ${NC}" 
+unzip OpenCV-3.4.zip
+sudo -H pip install $(awk '{print $1'} pippackage.list)
+cd opencv-3.4.0
 mkdir build
 cd build 
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=OFF -D WITH_OPENGL=ON -DENABLE_PRECOMPILED_HEADERS=OFF -DBUILD_opencv_cudacodec=OFF ..
-sudo -H pip install $(awk '{print $1'} pippackage.list)
-maxThreads=$(grep -c ^processor /proc/cpuinfo)
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=OFF -D WITH_OPENGL=ON -DENABLE_PRECOMPILED_HEADERS=OFF -DBUILD_opencv_cudacodec=OFF ..maxThreads=$(grep -c ^processor /proc/cpuinfo)
 echo Enter the number of CPU threads you want to use. FYI: You have $maxThreads CPU Threads.
 read nThreads
 sudo make -j$nThreads
