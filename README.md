@@ -31,6 +31,13 @@ Ubuntu Setup for Research in Robotics and Computer Vision
 - python-tk
 - tqdm
 - [Store git UserName and Password](https://stackoverflow.com/questions/35942754/how-to-save-username-and-password-in-git)
+- Mounting CVLDataMonster
+  - Install ``nfs-common`` using ``sudo apt install nfs-common``
+  - Create a space where you want to mount. For eg., I want to mount in ``/mnt/NitinSpace``. Execute ``sudo mkdir /mnt/NitinSpace``. 
+  - Give mount space premissions. ``sudo chmod -R 777 NitinSpace/`` in ``/mnt``.
+  - Add this line to ``/etc/fstab``: ``# Mount NAS 192.168.1.179:/nfs/NitinSpace /mnt/NitinSpace nfs rw,hard,intr,rsize=8192,wsize=8192,timeo=14 0 0`` (Change the IP and space name). 
+
+
 ## TODO:
 - MATLAB
 - Extracting Frames from VLC (https://www.raymond.cc/blog/extract-video-frames-to-images-using-vlc-media-player/)
