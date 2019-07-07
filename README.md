@@ -30,6 +30,7 @@ Ubuntu Setup for Research in Robotics and Computer Vision
 - Fixing sound: https://itsfoss.com/fix-sound-ubuntu-1304-quick-tip/
 - python-tk
 - tqdm
+- [Store git UserName and Password](https://stackoverflow.com/questions/35942754/how-to-save-username-and-password-in-git)
 ## TODO:
 - MATLAB
 - Extracting Frames from VLC (https://www.raymond.cc/blog/extract-video-frames-to-images-using-vlc-media-player/)
