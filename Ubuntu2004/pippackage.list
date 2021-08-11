@@ -1,0 +1,10 @@
+wheel
+numpy
+scipy
+matplotlib
+scikit-image
+scikit-learn
+ipython
+dlib
+pypng
+opencv-contrib-python==3.4.4.19
